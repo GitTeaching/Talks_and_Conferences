@@ -1,0 +1,16 @@
+
+{% extends "base.html" %}
+{% block content %}
+	{% for show in shows %}
+		<article class="media content-section">
+        <div class="media-body">
+          <div class="article-metadata">
+            <a class="mr-2" href="#">{{ show.producer }}</a>
+            <small class="text-muted">{{ show.id }}</small>
+          </div>
+          <h2><a class="article-title" href="#">{{ show.name }}</a></h2>
+          <p class="article-content">{{ show.description }}</p>
+        </div>
+    </article>
+	{% endfor %}
+{% endblock content %}
